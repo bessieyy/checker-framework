@@ -1,0 +1,330 @@
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @UnknownKeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @NonNull: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.initialization.qual:
+annotation @Initialized: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @Nullable: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package java.lang:
+annotation @Deprecated: @java.lang.annotation.Target(value={CONSTRUCTOR,FIELD,LOCAL_VARIABLE,METHOD,PACKAGE,PARAMETER,TYPE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.dataflow.qual:
+annotation @SideEffectFree: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package java.net:
+class Socket:
+
+    field created:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field bound:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field connected:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field closed:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field closeLock:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field shutIn:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field shutOut:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field impl:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field oldImpl:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field factory:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method <init>(Ljava/net/Proxy;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/net/SocketImpl;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/lang/String;I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/net/InetAddress;I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/lang/String;ILjava/net/InetAddress;I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/net/InetAddress;ILjava/net/InetAddress;I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/lang/String;IZ)V: @org.checkerframework.framework.qual.FromByteCode @java.lang.Deprecated
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/net/InetAddress;IZ)V: @org.checkerframework.framework.qual.FromByteCode @java.lang.Deprecated
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/net/SocketAddress;Ljava/net/SocketAddress;Z)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method createImpl(Z)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method checkOldImpl()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method setImpl()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method getImpl()Ljava/net/SocketImpl;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method connect(Ljava/net/SocketAddress;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method connect(Ljava/net/SocketAddress;I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method bind(Ljava/net/SocketAddress;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method checkAddress(Ljava/net/InetAddress;Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method postAccept()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method setCreated()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method setBound()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method setConnected()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method getInetAddress()Ljava/net/InetAddress;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getLocalAddress()Ljava/net/InetAddress;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getPort()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getLocalPort()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getRemoteSocketAddress()Ljava/net/SocketAddress;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getLocalSocketAddress()Ljava/net/SocketAddress;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getChannel()Ljava/nio/channels/SocketChannel;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getInputStream()Ljava/io/InputStream;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getOutputStream()Ljava/io/OutputStream;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setTcpNoDelay(Z)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getTcpNoDelay()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setSoLinger(ZI)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSoLinger()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method sendUrgentData(I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setOOBInline(Z)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getOOBInline()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setSoTimeout(I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSoTimeout()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setSendBufferSize(I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSendBufferSize()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setReceiveBufferSize(I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getReceiveBufferSize()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setKeepAlive(Z)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getKeepAlive()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setTrafficClass(I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getTrafficClass()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setReuseAddress(Z)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getReuseAddress()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method close()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method shutdownInput()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method shutdownOutput()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method toString()Ljava/lang/String;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method isConnected()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method isBound()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method isClosed()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method isInputShutdown()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method isOutputShutdown()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setSocketImplFactory(Ljava/net/SocketImplFactory;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setPerformancePreferences(III)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <clinit>()V:
+        return:
+

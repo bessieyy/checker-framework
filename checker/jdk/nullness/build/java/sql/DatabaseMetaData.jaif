@@ -1,0 +1,917 @@
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @UnknownKeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @NonNull: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.initialization.qual:
+annotation @Initialized: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @Nullable: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package java.sql:
+class DatabaseMetaData:
+
+    field procedureResultUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureNoResult:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureReturnsResult:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureColumnUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureColumnIn:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureColumnInOut:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureColumnOut:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureColumnReturn:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureColumnResult:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureNoNulls:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureNullable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field procedureNullableUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field columnNoNulls:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field columnNullable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field columnNullableUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field bestRowTemporary:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field bestRowTransaction:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field bestRowSession:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field bestRowUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field bestRowNotPseudo:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field bestRowPseudo:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field versionColumnUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field versionColumnNotPseudo:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field versionColumnPseudo:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field importedKeyCascade:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field importedKeyRestrict:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field importedKeySetNull:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field importedKeyNoAction:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field importedKeySetDefault:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field importedKeyInitiallyDeferred:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field importedKeyInitiallyImmediate:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field importedKeyNotDeferrable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field typeNoNulls:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field typeNullable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field typeNullableUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field typePredNone:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field typePredChar:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field typePredBasic:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field typeSearchable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field tableIndexStatistic:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field tableIndexClustered:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field tableIndexHashed:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field tableIndexOther:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field attributeNoNulls:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field attributeNullable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field attributeNullableUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field sqlStateXOpen:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field sqlStateSQL:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field sqlStateSQL99:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionColumnUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionColumnIn:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionColumnInOut:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionColumnOut:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionReturn:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionColumnResult:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionNoNulls:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionNullable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionNullableUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionResultUnknown:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionNoTable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field functionReturnsTable:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method allProceduresAreCallable()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method allTablesAreSelectable()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getURL()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getUserName()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method isReadOnly()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method nullsAreSortedHigh()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method nullsAreSortedLow()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method nullsAreSortedAtStart()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method nullsAreSortedAtEnd()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDatabaseProductName()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDatabaseProductVersion()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDriverName()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDriverVersion()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDriverMajorVersion()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDriverMinorVersion()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method usesLocalFiles()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method usesLocalFilePerTable()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsMixedCaseIdentifiers()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method storesUpperCaseIdentifiers()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method storesLowerCaseIdentifiers()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method storesMixedCaseIdentifiers()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsMixedCaseQuotedIdentifiers()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method storesUpperCaseQuotedIdentifiers()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method storesLowerCaseQuotedIdentifiers()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method storesMixedCaseQuotedIdentifiers()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getIdentifierQuoteString()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSQLKeywords()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getNumericFunctions()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getStringFunctions()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSystemFunctions()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getTimeDateFunctions()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSearchStringEscape()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getExtraNameCharacters()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsAlterTableWithAddColumn()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsAlterTableWithDropColumn()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsColumnAliasing()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method nullPlusNonNullIsNull()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsConvert()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsConvert(II)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsTableCorrelationNames()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsDifferentTableCorrelationNames()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsExpressionsInOrderBy()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsOrderByUnrelated()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsGroupBy()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsGroupByUnrelated()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsGroupByBeyondSelect()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsLikeEscapeClause()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsMultipleResultSets()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsMultipleTransactions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsNonNullableColumns()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsMinimumSQLGrammar()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsCoreSQLGrammar()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsExtendedSQLGrammar()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsANSI92EntryLevelSQL()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsANSI92IntermediateSQL()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsANSI92FullSQL()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsIntegrityEnhancementFacility()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsOuterJoins()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsFullOuterJoins()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsLimitedOuterJoins()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSchemaTerm()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getProcedureTerm()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getCatalogTerm()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method isCatalogAtStart()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getCatalogSeparator()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSchemasInDataManipulation()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSchemasInProcedureCalls()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSchemasInTableDefinitions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSchemasInIndexDefinitions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSchemasInPrivilegeDefinitions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsCatalogsInDataManipulation()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsCatalogsInProcedureCalls()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsCatalogsInTableDefinitions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsCatalogsInIndexDefinitions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsCatalogsInPrivilegeDefinitions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsPositionedDelete()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsPositionedUpdate()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSelectForUpdate()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsStoredProcedures()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSubqueriesInComparisons()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSubqueriesInExists()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSubqueriesInIns()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSubqueriesInQuantifieds()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsCorrelatedSubqueries()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsUnion()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsUnionAll()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsOpenCursorsAcrossCommit()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsOpenCursorsAcrossRollback()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsOpenStatementsAcrossCommit()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsOpenStatementsAcrossRollback()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxBinaryLiteralLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxCharLiteralLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxColumnNameLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxColumnsInGroupBy()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxColumnsInIndex()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxColumnsInOrderBy()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxColumnsInSelect()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxColumnsInTable()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxConnections()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxCursorNameLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxIndexLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxSchemaNameLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxProcedureNameLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxCatalogNameLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxRowSize()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method doesMaxRowSizeIncludeBlobs()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxStatementLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxStatements()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxTableNameLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxTablesInSelect()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxUserNameLength()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDefaultTransactionIsolation()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsTransactions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsTransactionIsolationLevel(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsDataDefinitionAndDataManipulationTransactions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsDataManipulationTransactionsOnly()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method dataDefinitionCausesTransactionCommit()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method dataDefinitionIgnoredInTransactions()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getProcedures(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getProcedureColumns(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getTables(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+                inner-type 0, 0: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSchemas()Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getCatalogs()Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getTableTypes()Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getColumns(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getColumnPrivileges(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getTablePrivileges(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getBestRowIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #4:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getVersionColumns(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getPrimaryKeys(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getImportedKeys(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getExportedKeys(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getCrossReference(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #4:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #5:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getTypeInfo()Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getIndexInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #4:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsResultSetType(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsResultSetConcurrency(II)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method ownUpdatesAreVisible(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method ownDeletesAreVisible(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method ownInsertsAreVisible(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method othersUpdatesAreVisible(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method othersDeletesAreVisible(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method othersInsertsAreVisible(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method updatesAreDetected(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method deletesAreDetected(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method insertsAreDetected(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsBatchUpdates()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getUDTs(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[I)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+                inner-type 0, 0: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getConnection()Ljava/sql/Connection;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsSavepoints()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsNamedParameters()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsMultipleOpenResults()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsGetGeneratedKeys()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSuperTypes(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSuperTables(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getAttributes(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsResultSetHoldability(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getResultSetHoldability()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDatabaseMajorVersion()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getDatabaseMinorVersion()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getJDBCMajorVersion()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getJDBCMinorVersion()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSQLStateType()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method locatorsUpdateCopy()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsStatementPooling()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getRowIdLifetime()Ljava/sql/RowIdLifetime;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSchemas(Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsStoredFunctionsUsingCallSyntax()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method autoCommitFailureClosesAllResultSets()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getClientInfoProperties()Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getFunctions(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getFunctionColumns(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getPseudoColumns(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #2:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method generatedKeyAlwaysReturned()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getMaxLogicalLobSize()J: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method supportsRefCursors()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+

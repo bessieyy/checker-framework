@@ -1,0 +1,26 @@
+package org.checkerframework.checker.nullness.qual:
+annotation @UnknownKeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @NonNull: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.initialization.qual:
+annotation @Initialized: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package java.lang:
+class ClassLoader$2:
+
+    field val$e:
+
+    method <init>(Ljava/util/Enumeration;)V:
+        return:
+
+    method nextElement()Ljava/net/URL;:
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method hasMoreElements()Z:
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method nextElement()Ljava/lang/Object;:
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+

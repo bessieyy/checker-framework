@@ -1,0 +1,152 @@
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @UnknownKeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @NonNull: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.initialization.qual:
+annotation @Initialized: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.dataflow.qual:
+annotation @Pure: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package org.checkerframework.dataflow.qual:
+annotation @SideEffectFree: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package org.checkerframework.checker.nullness.qual:
+annotation @Nullable: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package java.util.regex:
+class Matcher:
+
+    method <init>()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method pattern()Ljava/util/regex/Pattern;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method toMatchResult()Ljava/util/regex/MatchResult;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method usePattern(Ljava/util/regex/Pattern;)Ljava/util/regex/Matcher;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method reset()Ljava/util/regex/Matcher;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method reset(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method start()I: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method start(I)I: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method end()I: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method end(I)I: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method group()Ljava/lang/String;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method group(I)Ljava/lang/String;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method groupCount()I: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method matches()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method find()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method find(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method lookingAt()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method quoteReplacement(Ljava/lang/String;)Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method appendReplacement(Ljava/lang/StringBuffer;Ljava/lang/String;)Ljava/util/regex/Matcher;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method appendTail(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method replaceAll(Ljava/lang/String;)Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method replaceFirst(Ljava/lang/String;)Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method region(II)Ljava/util/regex/Matcher;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method regionStart()I: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method regionEnd()I: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method hasTransparentBounds()Z: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method useTransparentBounds(Z)Ljava/util/regex/Matcher;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method hasAnchoringBounds()Z: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method useAnchoringBounds(Z)Ljava/util/regex/Matcher;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method toString()Ljava/lang/String;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method hitEnd()Z: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method requireEnd()Z: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+

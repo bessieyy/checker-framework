@@ -1,0 +1,87 @@
+package java.lang:
+annotation @SuppressWarnings: @java.lang.annotation.Target(value={TYPE,FIELD,METHOD,PARAMETER,CONSTRUCTOR,LOCAL_VARIABLE}) @java.lang.annotation.Retention(value=SOURCE)
+    String[] value
+
+package org.checkerframework.checker.nullness.qual:
+annotation @KeyForBottom: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @NonNull: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.initialization.qual:
+annotation @Initialized: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @UnknownKeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @Nullable: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.dataflow.qual:
+annotation @SideEffectFree: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package java.lang.ref:
+class Reference: @java.lang.SuppressWarnings(value={"rawtypes"})
+    typeparam 0: @org.checkerframework.checker.nullness.qual.KeyForBottom @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+    bound 0 &0: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.initialization.qual.Initialized
+
+    field referent:
+
+    field queue:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+            inner-type 3, 0: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.initialization.qual.Initialized
+
+    field next:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field discovered:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field lock:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    field pending:
+        type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method get()Ljava/lang/Object;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method clear()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method isEnqueued()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method enqueue()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method <init>(Ljava/lang/Object;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method <init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V: @org.checkerframework.framework.qual.FromByteCode @java.lang.SuppressWarnings(value={"unchecked"})
+        return:
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+                inner-type 3, 0: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.initialization.qual.Initialized
+
+    method access$100()Ljava/lang/ref/Reference$Lock;:
+        return:
+
+    method access$200()Ljava/lang/ref/Reference;:
+        return:
+
+    method access$202(Ljava/lang/ref/Reference;)Ljava/lang/ref/Reference;:
+        return:
+
+    method access$300(Ljava/lang/ref/Reference;)Ljava/lang/ref/Reference;:
+        return:
+
+    method access$302(Ljava/lang/ref/Reference;Ljava/lang/ref/Reference;)Ljava/lang/ref/Reference;:
+        return:
+
+    method <clinit>()V:
+        return:
+

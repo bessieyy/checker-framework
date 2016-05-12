@@ -1,0 +1,116 @@
+package org.checkerframework.checker.nullness.qual:
+annotation @Nullable: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @UnknownKeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.initialization.qual:
+annotation @Initialized: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @KeyForBottom: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @NonNull: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @KeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+    String[] value
+
+package org.checkerframework.dataflow.qual:
+annotation @SideEffectFree: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package org.checkerframework.checker.nullness.qual:
+annotation @EnsuresNonNullIf: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+    boolean result
+    String[] expression
+
+package org.checkerframework.dataflow.qual:
+annotation @Pure: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package java.util:
+class NavigableMap:
+    bound 0 &0: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+    bound 1 &0: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+    typeparam 0: @org.checkerframework.checker.nullness.qual.KeyForBottom @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+    typeparam 1: @org.checkerframework.checker.nullness.qual.KeyForBottom @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method lowerEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method lowerKey(Ljava/lang/Object;)Ljava/lang/Object;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable
+
+    method floorEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method floorKey(Ljava/lang/Object;)Ljava/lang/Object;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable
+
+    method ceilingEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method ceilingKey(Ljava/lang/Object;)Ljava/lang/Object;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable
+
+    method higherEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method higherKey(Ljava/lang/Object;)Ljava/lang/Object;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable
+
+    method firstEntry()Ljava/util/Map$Entry;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method lastEntry()Ljava/util/Map$Entry;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method pollFirstEntry()Ljava/util/Map$Entry;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method pollLastEntry()Ljava/util/Map$Entry;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method descendingMap()Ljava/util/NavigableMap;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method navigableKeySet()Ljava/util/NavigableSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+            inner-type 3, 0: @org.checkerframework.checker.nullness.qual.KeyFor(value={"this"})
+
+    method descendingKeySet()Ljava/util/NavigableSet;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+            inner-type 3, 0: @org.checkerframework.checker.nullness.qual.KeyFor(value={"this"})
+
+    method subMap(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableMap;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #3:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method headMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method tailMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+        parameter #1:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method headMap(Ljava/lang/Object;)Ljava/util/SortedMap;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method isEmpty()Z: @org.checkerframework.checker.nullness.qual.EnsuresNonNullIf(expression={"firstEntry()","pollFirstEntry()","lastEntry()","pollLastEntry()"},result=false) @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+

@@ -1,0 +1,85 @@
+package org.checkerframework.dataflow.qual:
+annotation @Pure: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @Nullable: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @UnknownKeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.initialization.qual:
+annotation @Initialized: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @NonNull: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.w3c.dom.ls:
+class LSInput:
+
+    method getCharacterStream()Ljava/io/Reader;: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setCharacterStream(Ljava/io/Reader;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getByteStream()Ljava/io/InputStream;: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setByteStream(Ljava/io/InputStream;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getStringData()Ljava/lang/String;: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setStringData(Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getSystemId()Ljava/lang/String;: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setSystemId(Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getPublicId()Ljava/lang/String;: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setPublicId(Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getBaseURI()Ljava/lang/String;: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setBaseURI(Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getEncoding()Ljava/lang/String;: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setEncoding(Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.Nullable @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.initialization.qual.Initialized
+
+    method getCertifiedText()Z: @org.checkerframework.dataflow.qual.Pure @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method setCertifiedText(Z)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+

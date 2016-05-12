@@ -1,0 +1,258 @@
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @LockPossiblyHeld: @java.lang.annotation.Target(value={}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @GuardedBy: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+    String[] value
+
+package org.checkerframework.checker.lock.qual:
+annotation @GuardSatisfied: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={TYPE_USE})
+    int value
+
+package org.checkerframework.dataflow.qual:
+annotation @SideEffectFree: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package org.checkerframework.checker.lock.qual:
+annotation @EnsuresLockHeldIf: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+    boolean result
+    String[] expression
+
+package org.checkerframework.checker.lock.qual:
+annotation @ReleasesNoLocks: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package java.lang:
+class Thread:
+
+    field MIN_PRIORITY:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field NORM_PRIORITY:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field MAX_PRIORITY:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method <init>()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method <init>(Ljava/lang/Runnable;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method <init>(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #1:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method <init>(Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method <init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #1:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method <init>(Ljava/lang/Runnable;Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #1:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method <init>(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #1:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #2:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method <init>(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;J)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #1:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #2:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #3:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method currentThread()Ljava/lang/Thread;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method yield()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method sleep(J)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method sleep(JI)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #1:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method start()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method run()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method stop()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method stop(Ljava/lang/Throwable;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method interrupt()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method interrupted()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method isInterrupted()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        receiver: @org.checkerframework.checker.lock.qual.GuardSatisfied @org.checkerframework.checker.lock.qual.LockPossiblyHeld
+
+    method destroy()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method suspend()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method resume()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method setPriority(I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        receiver: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getPriority()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method setName(Ljava/lang/String;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getName()Ljava/lang/String;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getThreadGroup()Ljava/lang/ThreadGroup;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method activeCount()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method enumerate([Ljava/lang/Thread;)I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+                inner-type 0, 0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method join(J)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method join(JI)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #1:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method join()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method dumpStack()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method setDaemon(Z)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        receiver: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method isDaemon()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        receiver: @org.checkerframework.checker.lock.qual.GuardSatisfied @org.checkerframework.checker.lock.qual.LockPossiblyHeld
+
+    method checkAccess()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method toString()Ljava/lang/String;: @org.checkerframework.dataflow.qual.SideEffectFree @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        receiver: @org.checkerframework.checker.lock.qual.GuardSatisfied @org.checkerframework.checker.lock.qual.LockPossiblyHeld
+
+    method getContextClassLoader()Ljava/lang/ClassLoader;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method setContextClassLoader(Ljava/lang/ClassLoader;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getStackTrace()[Ljava/lang/StackTraceElement;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+            inner-type 0, 0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getAllStackTraces()Ljava/util/Map;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+            inner-type 3, 1,0, 0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+            inner-type 3, 1: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+            inner-type 3, 0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getId()J: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getState()Ljava/lang/Thread$State;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method setUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method holdsLock(Ljava/lang/Object;)Z: @org.checkerframework.checker.lock.qual.EnsuresLockHeldIf(expression={"#1"},result=true) @org.checkerframework.checker.lock.qual.ReleasesNoLocks @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method isAlive()Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        receiver: @org.checkerframework.checker.lock.qual.GuardSatisfied @org.checkerframework.checker.lock.qual.LockPossiblyHeld
+
+    method countStackFrames()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+

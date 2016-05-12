@@ -1,0 +1,75 @@
+package org.checkerframework.checker.lock.qual:
+annotation @LockPossiblyHeld: @java.lang.annotation.Target(value={}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @GuardedByBottom: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @GuardedBy: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+    String[] value
+
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package java.util:
+class Spliterator:
+    typeparam 0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedByBottom
+    bound 0 &0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field ORDERED:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field DISTINCT:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field SORTED:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field SIZED:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field NONNULL:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field IMMUTABLE:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field CONCURRENT:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field SUBSIZED:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method tryAdvance(Ljava/util/function/Consumer;)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+                inner-type 3, 0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method forEachRemaining(Ljava/util/function/Consumer;)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+                inner-type 3, 0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method trySplit()Ljava/util/Spliterator;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method estimateSize()J: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getExactSizeIfKnown()J: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method characteristics()I: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method hasCharacteristics(I)Z: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method getComparator()Ljava/util/Comparator;: @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+            inner-type 3, 0: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+

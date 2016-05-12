@@ -1,0 +1,53 @@
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @EnsuresLockHeld: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+    String[] value
+
+package org.checkerframework.checker.lock.qual:
+annotation @ReleasesNoLocks: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package org.checkerframework.checker.lock.qual:
+annotation @EnsuresLockHeldIf: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+    boolean result
+    String[] expression
+
+package org.checkerframework.checker.lock.qual:
+annotation @LockPossiblyHeld: @java.lang.annotation.Target(value={}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @GuardedBy: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+    String[] value
+
+package org.checkerframework.checker.lock.qual:
+annotation @MayReleaseLocks: @java.lang.annotation.Retention(value=RUNTIME) @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR})
+
+package java.util.concurrent.locks:
+class ReentrantLock:
+
+    method <init>()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method lock()V: @org.checkerframework.checker.lock.qual.EnsuresLockHeld(value={"this"}) @org.checkerframework.checker.lock.qual.ReleasesNoLocks @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method lockInterruptibly()V: @org.checkerframework.checker.lock.qual.EnsuresLockHeld(value={"this"}) @org.checkerframework.checker.lock.qual.ReleasesNoLocks @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method tryLock()Z: @org.checkerframework.checker.lock.qual.EnsuresLockHeldIf(expression={"this"},result=true) @org.checkerframework.checker.lock.qual.ReleasesNoLocks @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method tryLock(JLjava/util/concurrent/TimeUnit;)Z: @org.checkerframework.checker.lock.qual.EnsuresLockHeldIf(expression={"this"},result=true) @org.checkerframework.checker.lock.qual.ReleasesNoLocks @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #0:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+        parameter #1:
+            type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method isHeldByCurrentThread()Z: @org.checkerframework.checker.lock.qual.EnsuresLockHeldIf(expression={"this"},result=true) @org.checkerframework.checker.lock.qual.ReleasesNoLocks @org.checkerframework.framework.qual.FromByteCode
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method unlock()V: @org.checkerframework.checker.lock.qual.MayReleaseLocks @org.checkerframework.framework.qual.FromByteCode
+        return:
+

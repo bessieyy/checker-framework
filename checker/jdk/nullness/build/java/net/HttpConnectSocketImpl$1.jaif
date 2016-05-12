@@ -1,0 +1,30 @@
+package java.lang:
+annotation @Override: @java.lang.annotation.Retention(value=SOURCE) @java.lang.annotation.Target(value={METHOD})
+
+package org.checkerframework.checker.nullness.qual:
+annotation @UnknownKeyFor: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.nullness.qual:
+annotation @NonNull: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.initialization.qual:
+annotation @Initialized: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package java.net:
+class HttpConnectSocketImpl$1:
+
+    field val$urlString:
+
+    field val$timeout:
+
+    field this$0:
+
+    method <init>(Ljava/net/HttpConnectSocketImpl;Ljava/lang/String;I)V:
+        return:
+
+    method run()Ljava/net/Socket;: @java.lang.Override
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+
+    method run()Ljava/lang/Object;: @java.lang.Override
+        return: @org.checkerframework.checker.nullness.qual.UnknownKeyFor @org.checkerframework.checker.nullness.qual.NonNull @org.checkerframework.checker.initialization.qual.Initialized
+

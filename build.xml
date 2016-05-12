@@ -1,0 +1,203 @@
+<!--
+  This is a configuration file for use by Ant when building the
+  Checker Framework.
+  This top-level build file simply delegates to the subprojects.
+  It assumes that the "checker" project is aware of all dependencies
+  and that it is sufficient to run targets from there.
+
+  Each subproject builds its own Javadoc including the documentation
+  of all projects it in turn depends on. This would allow us to
+  easily ship each subproject independently. Subprojects that
+  already ship independently also build a Javadoc JAR file
+  containing all its documentation.
+-->
+<project name="checkerframework" default="dist"
+        basedir=".">
+
+  <target name="dist"
+          description="Compile and jar all subprojects">
+    <ant dir="checker">
+      <target name="dist"/>
+    </ant>
+  </target>
+
+  <target name="dist-nobuildjdk"
+          description="Rebuild the framework.  Rebuild checker on top of framework without rebuilding the JDK">
+      <ant dir="framework">
+          <target name="clean"/>
+          <target name="dist"/>
+      </ant>
+      <ant dir="checker">
+          <target name="dist-nobuildjdk"/>
+      </ant>
+  </target>
+
+  <target name="build" depends="check-style"
+          description="Compile all subprojects">
+    <ant dir="checker">
+      <target name="build"/>
+    </ant>
+  </target>
+
+  <target name="clean"
+          description="Clean all subprojects">
+    <ant dir="checker">
+      <target name="clean"/>
+    </ant>
+  </target>
+
+  <target name="tests" depends="dist"
+          description="Run test cases for all subprojects">
+    <ant dir="checker">
+      <target name="all-tests"/>
+    </ant>
+  </target>
+
+  <target name="tests-nojtreg" depends="dist"
+          description="Run test cases for all subprojects, except jtreg tests">
+    <ant dir="checker">
+      <target name="all-tests-nojtreg"/>
+    </ant>
+  </target>
+
+  <target name="tests-nobuildjdk" depends="dist-nobuildjdk"
+          description="Run test cases for all subprojects (without rebuilding the JDK)">
+    <ant dir="checker">
+      <target name="all-tests-nobuildjdk"/>
+    </ant>
+  </target>
+
+  <target name="tests-nojtreg-nobuildjdk" depends="dist-nobuildjdk"
+          description="Run test cases for all subprojects, except jtreg tests (without rebuilding the JDK)">
+    <ant dir="checker">
+      <target name="all-tests-nojtreg-nobuildjdk"/>
+    </ant>
+  </target>
+
+  <target name="javadoc"
+          description="Generate javadoc for all subprojects">
+    <ant dir="checker">
+      <target name="javadoc"/>
+    </ant>
+    <ant dir="dataflow">
+      <target name="javadoc"/>
+    </ant>
+    <ant dir="framework">
+      <target name="javadoc"/>
+    </ant>
+    <ant dir="javacutil">
+      <target name="javadoc"/>
+    </ant>
+    <ant dir="stubparser">
+      <target name="javadoc"/>
+    </ant>
+  </target>
+
+  <target name="javadoc-private"
+          description="Generate javadoc, inculding private classes/members, for all subprojects">
+    <ant dir=".">
+      <property name="javadoc.private" value="true"/>
+      <target name="javadoc"/>
+    </ant>
+  </target>
+
+  <target name="dist-release">
+      <ant dir="checker">
+          <target name="dist-release"/>
+      </ant>
+
+      <ant dir="javacutil">
+          <target name="sources-jar"/>
+      </ant>
+      <ant dir="javacutil">
+        <target name="javadoc-jar" />
+    </ant>
+      <ant dir="dataflow">
+          <target name="sources-jar"/>
+      </ant>
+      <ant dir="dataflow">
+          <target name="javadoc-jar" />
+      </ant>
+  </target>
+
+  <target name="html-validate"
+	  description="Validate that HTML files are well-formed; only works with JDK 8">
+    <exec executable="html5validator">
+      <arg value="--ignore"/>
+      <arg value="/api/"/>
+      <arg value="/build/"/>
+      <arg value="/checker/manual/manual.html"/>
+      <arg value="/checker/jdk/nullness/src/java/lang/ref/package.html"/>
+    </exec>
+  </target>
+
+  <property name="style.args1" value="-r -n -e"/>
+  <property name="style.args2" value="--exclude-dir=.git --exclude-dir=api --exclude-dir=bootstrap --exclude-dir=build --exclude-dir=jdk --exclude-dir=stubparser --exclude='*.aux' --exclude='*.class' --exclude='*.dvi' --exclude='*.jar' --exclude='*.jtr' --exclude='*.log' --exclude='*.patch' --exclude='*.pdf' --exclude='*.png' --exclude='*.sty' --exclude='*~' --exclude='CFLogo.ai' --exclude='logfile.log.rec.index' --exclude='manual.html' --exclude='junit*.properties' ."/>
+
+  <target name="check-style"
+	  description="Check basic style guidelines">
+    <!-- There should be a way to templatize the following. -->
+    <exec executable="grep" outputproperty="trailingwhitespace" failonerror="false">
+      <arg line="${style.args1}"/>
+      <arg value=" $"/>
+      <arg line="${style.args2}"/>
+    </exec>
+    <fail message="Trailing whitespace:${line.separator}${trailingwhitespace}">
+      <condition>
+	<not>
+	  <equals arg1="${trailingwhitespace}" arg2=""/>
+	</not>
+      </condition>
+    </fail>
+    <exec executable="grep" outputproperty="missingspace" failonerror="false">
+      <arg line="${style.args1}"/>
+      <arg value="[^\\]\b\(else\|finally\|try\){\|}\(catch\|else\|finally\)\b\|){\($\|[^0-9]\)\|\b\(catch\|for\|if\|while\)("/>
+      <arg line="${style.args2}"/>
+      <arg line="--exclude=build.xml --exclude=Makefile"/>
+    </exec>
+    <fail message="Missing space:${line.separator}${missingspace}">
+      <condition>
+	<not>
+	  <equals arg1="${missingspace}" arg2=""/>
+	</not>
+      </condition>
+    </fail>
+  </target>
+
+  <target name="tags"
+          description="Generate TAGS file">
+    <ant dir="checker">
+      <target name="tags"/>
+    </ant>
+    <ant dir="dataflow">
+      <target name="tags"/>
+    </ant>
+    <ant dir="framework">
+      <target name="tags"/>
+    </ant>
+    <ant dir="javacutil">
+      <target name="tags"/>
+    </ant>
+    <ant dir="stubparser">
+      <target name="tags"/>
+    </ant>
+    <exec executable="make" dir="checker/manual" failonerror="true">
+      <arg value="tags"/>
+    </exec>
+    <exec executable="etags" failonerror="true">
+      <arg value="-i"/>
+      <arg value="checker/TAGS"/>
+      <arg value="-i"/>
+      <arg value="dataflow/TAGS"/>
+      <arg value="-i"/>
+      <arg value="framework/TAGS"/>
+      <arg value="-i"/>
+      <arg value="javacutil/TAGS"/>
+      <arg value="-i"/>
+      <arg value="stubparser/TAGS"/>
+      <arg value="-i"/>
+      <arg value="checker/manual/TAGS"/>
+    </exec>
+  </target>
+
+</project>

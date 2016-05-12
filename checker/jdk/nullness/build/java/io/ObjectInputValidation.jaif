@@ -1,0 +1,9 @@
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package java.io:
+class ObjectInputValidation:
+
+    method validateObject()V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+

@@ -1,0 +1,36 @@
+package org.checkerframework.framework.qual:
+annotation @FromByteCode: @java.lang.annotation.Target(value={METHOD,CONSTRUCTOR,TYPE,PACKAGE}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @LockPossiblyHeld: @java.lang.annotation.Target(value={}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @GuardedBy: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+    String[] value
+
+package java.util.stream:
+class Collector$Characteristics:
+
+    field CONCURRENT:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field UNORDERED:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field IDENTITY_FINISH:
+        type: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    field $VALUES:
+
+    method values()[Ljava/util/stream/Collector$Characteristics;:
+        return:
+
+    method valueOf(Ljava/lang/String;)Ljava/util/stream/Collector$Characteristics;:
+        return:
+
+    method <init>(Ljava/lang/String;I)V: @org.checkerframework.framework.qual.FromByteCode
+        return:
+
+    method <clinit>()V:
+        return:
+

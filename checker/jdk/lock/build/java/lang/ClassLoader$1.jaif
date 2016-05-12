@@ -1,0 +1,27 @@
+package org.checkerframework.checker.lock.qual:
+annotation @LockPossiblyHeld: @java.lang.annotation.Target(value={}) @java.lang.annotation.Retention(value=RUNTIME)
+
+package org.checkerframework.checker.lock.qual:
+annotation @GuardedBy: @java.lang.annotation.Target(value={TYPE_USE,TYPE_PARAMETER}) @java.lang.annotation.Retention(value=RUNTIME)
+    String[] value
+
+package java.lang:
+class ClassLoader$1:
+
+    field val$sm:
+
+    field val$name:
+
+    field val$i:
+
+    field this$0:
+
+    method <init>(Ljava/lang/ClassLoader;Ljava/lang/SecurityManager;Ljava/lang/String;I)V:
+        return:
+
+    method run()Ljava/lang/Void;:
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+
+    method run()Ljava/lang/Object;:
+        return: @org.checkerframework.checker.lock.qual.LockPossiblyHeld @org.checkerframework.checker.lock.qual.GuardedBy
+

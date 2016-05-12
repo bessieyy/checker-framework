@@ -1,0 +1,8 @@
+package java.util:
+class Locale$1:
+
+    field $SwitchMap$java$util$Locale$Category:
+
+    method <clinit>()V:
+        return:
+

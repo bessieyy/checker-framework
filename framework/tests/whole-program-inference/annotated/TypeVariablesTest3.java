@@ -1,0 +1,18 @@
+import tests.wholeprograminference.qual.*;
+import tests.wholeprograminference.qual.Sibling2;
+
+class Generic<@Sibling1 T extends /*@Sibling1*/ Object> {
+    public @Sibling2  T sibling2;
+    public @Sibling1  T sibling1;
+
+    public @Sibling2 T tField;
+    void foo(@Sibling2 T param) {
+        param = sibling2;
+    }
+    void baz(T param) {
+        param = sibling1;
+    }
+    void bar(@Sibling2 T param) {
+        tField = param;
+    }
+}
